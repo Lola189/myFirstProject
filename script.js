@@ -1,10 +1,16 @@
-const title = 10
-const screens = 11
-const screenPrice = 12
-const rollback = 13
-const fullPrice = 14
-const adaptive = 15
+const title = "My First Project";
+const screens = "Простые, Сложные, Интерактивные";
+const screenPrice = 30;
+const rollback = 10;
+const fullPrice = 50;
+const adaptive = true;
 
-
-console.log("Hello console");
-alert("Hello World")
+console.log(typeof title);
+console.log(typeof fullPrice);
+console.log(typeof adaptive);
+console.log(screens.length);
+console.log("Стоимость верстки экранов " + screenPrice + " долларов");
+console.log("Стоимость разработки сайта " + fullPrice + " долларов");
+console.log(screens.toLowerCase());
+console.log(screens.split(", "));
+console.log("Откат посреднику за работу: " + fullPrice*(rollback/100) + "%")
