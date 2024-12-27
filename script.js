@@ -19,8 +19,6 @@ const asking = function () {
     title = prompt('Как называется ваш проект?', "Калькулятор верстки")
     screens = prompt('Какие типы экранов нужно разработать?', "Простые, Сложные, Интерактивные")
 
-    screenPrice = prompt('Сколько будет стоить данная работа?')
-
     do {
         screenPrice = prompt('Сколько будет стоить данная работа?')
     } while (!isNumber(screenPrice))
@@ -29,7 +27,8 @@ const asking = function () {
 }
 
 const getAllServicePrices = function () {
-    let sum = 0
+    let sum
+    let servicePrise = 0
 
     for (let i = 0; i < 2; i++) {
 
@@ -40,8 +39,9 @@ const getAllServicePrices = function () {
         }
 
         do {
-            sum = prompt('Сколько это будет стоить?')
-        } while (!isNumber(sum))
+            servicePrise = prompt('Сколько это будет стоить?')
+        } while (!isNumber(servicePrise))
+        sum += +servicePrise;
     }
 
     return sum
@@ -87,5 +87,6 @@ showTypeOf(title);
 showTypeOf(screenPrice);
 showTypeOf(adaptive);
 
+console.log("screenPrise", screenPrice)
 console.log("allServicePrices", allServicePrices)
 console.log(screens)
