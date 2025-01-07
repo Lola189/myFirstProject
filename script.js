@@ -27,7 +27,7 @@ const asking = function () {
 }
 
 const getAllServicePrices = function () {
-    let sum
+    let sum = 0
     let servicePrise = 0
 
     for (let i = 0; i < 2; i++) {
